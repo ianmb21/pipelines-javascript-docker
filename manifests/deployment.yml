@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ianmbpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ianmbpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ianmbpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ianmbpipelinesjavascriptdocker 
+          image: iancontainerregistry.azurecr.io/ianmbpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
